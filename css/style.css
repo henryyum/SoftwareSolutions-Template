@@ -102,12 +102,11 @@ body {
 .custom-width {
   width: 50%;
 }
-
-@media (max-width: 1400px) {
+@media (max-width: 1650px) {
   .custom-fs {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
   }
-} 
+}
 
 @media (max-width: 1199px) {
   .custom-fs {
