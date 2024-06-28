@@ -1,0 +1,139 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  user-select: none;
+}
+
+.main-tag-1 {
+  transform: rotate(10deg);
+  width: 100vw;
+  display: inline-block
+}
+
+.main-tag-2 {
+  transform: rotate(-5deg);
+  width: 100vw;
+  display: inline-block
+}
+
+.border-custom {
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 6px solid black;
+  border-bottom: 6px solid black;
+}
+
+.border-bottom-custom {
+  border-bottom: 2px solid #dee2e6;
+}
+
+.margin-bottom-custom {
+  margin-bottom: 8rem;
+}
+
+.border-bottom-footer {
+  border-bottom: 8px solid #0B5ED7;
+}
+
+.custom-bg-color {
+  background-color: #fdf8e1;
+}
+
+.team-img-size {
+  aspect-ratio: .8;
+  max-width: 350px;
+}
+
+.team-img-size-mot {
+  aspect-ratio: .8;
+  max-width: 350px;
+}
+
+
+.custom-min-height {
+  min-height: 280px;
+}
+
+.margin-custom {
+  margin-top: 12rem;
+  margin-bottom: 4rem;
+}
+.font-size-custom {
+  font-size: 6rem;
+}
+
+.rotate-blue {
+  transform: rotate(6deg);
+  top: 0;
+  left: 0;
+  width: 100%
+}
+
+.rotate-black {
+  transform: rotate(-6deg);
+  top: 0;
+  left: 0;
+  width: 100%
+}
+
+.hero-images {
+  max-width: 200px;
+  width: 100%;
+}
+
+.icon-font-size {
+  width: 28px;
+  height: 28px;
+}
+
+.btn-animation {
+  transform: translateY(0);
+  transition: all .3s;
+}
+
+.btn-animation:hover {
+  transform: translateY(-10%);
+}
+
+.icon-font-size::before {
+  font-size: 20px;
+}
+
+.custom-width {
+  width: 50%;
+}
+
+@media (max-width: 1400px) {
+  .custom-fs {
+    font-size: 1.35rem;
+  }
+} 
+
+@media (max-width: 1199px) {
+  .custom-fs {
+    font-size: 1.15rem;
+  }
+} 
+
+@media (max-width: 992px) {
+  .margin-custom {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+  .custom-width {
+    width: 100%;
+  }
+  .custom-fs {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 800px) {
+  .fa-5x {
+    font-size: 4em;
+  }
+}
+@media (max-width: 600px) {
+  .team-img-size-mot {
+    aspect-ratio: 1;
+  }
+}

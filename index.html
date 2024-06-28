@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CDN -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+    crossorigin="anonymous"
+  />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Fontello -->
+    <link rel="stylesheet" href="css/fontello.css">
+
+  <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+  <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Software Solutions Template</title>
+  </head>
+  <body>
+
+  <!-- Navigation -->
+
+    <nav class="navbar navbar-expand-xl bg-white sticky-top shadow-sm" id="home">
+      <div class="container py-2">
+        <a href="#" class="navbar-brand btn-animation"><i class="fa-brands fa-envira text-bg-primary p-1 rounded-5"></i> IDV Technologies</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto me-auto align-items-center gap-3 pt-3">
+            <li class="nav-item"> 
+              <a href="#" class="nav-link text-primary btn-animation" onclick=closeMenu()>Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#services" class="nav-link btn-animation" onclick=closeMenu()>Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="#work" class="nav-link btn-animation" onclick=closeMenu()>Work</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link btn-animation" onclick=closeMenu()>About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="#team" class="nav-link btn-animation" onclick=closeMenu()>Our Team</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link btn-animation" onclick=closeMenu()>Contact</a>
+            </li>
+          </ul>
+
+          <button class="btn btn-primary p-3 rounded-4 shadow d-none d-xl-block border-custom btn-animation">Get a Consultation</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+
+    <main>
+      <div class="container py-5 text-center">
+        <button class="btn bg-light text-primary border rounded-3">#1 BEST YOUNG SOFTWARE HOUSE</button>
+        <h1 class="display-2 mt-4 fw-normal">We create Apps - Web for human, not <span class="text-primary text-decoration-line-through">robots</span></h1>
+        <p class="w-50 ms-auto me-auto my-4 text-muted">A team of experienced young developers and designers passionate about creating web-apps to help your business grow</p>
+        <button class="btn btn-primary rounded-4 shadow p-3 mb-5 mt-3 border-custom btn-animation">Start New Project</button>
+      
+      </div>
+      <div class="d-none d-lg-block transition text-center position-relative">
+        <h4 class="rotate-blue position-absolute text-bg-primary custom-fs py-2">WEBSITES <i class="icon-seperatorwhite"></i>MOBILE APPS <i class="icon-seperatorwhite"></i> FRONTEND DEVELOPMENT <i class="icon-seperatorwhite"></i> UI/UX DESIGN <i class="icon-seperatorwhite"></i> BRAND & GRAPHIC DESIGN</h4>
+        <h4 class="rotate-black position-absolute text-bg-dark custom-fs py-2">WEBSITES <i class="icon-seperatorwhite"></i>MOBILE APPS <i class="icon-seperatorwhite"></i> FRONTEND DEVELOPMENT <i class="icon-seperatorwhite"></i> UI/UX DESIGN <i class="icon-seperatorwhite"></i> BRAND & GRAPHIC DESIGN</h4>
+      </div>
+
+      <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 px-4 margin-custom">
+        <i class="icon-salesforce text-muted fa-5x"></i>
+        <i class="icon-cc-stripe text-muted fa-5x"></i>
+        <i class="icon-cc-paypal text-muted fa-5x"></i>
+        <i class="icon-cc-jcb text-muted fa-5x"></i>
+        <i class="icon-cc-discover text-muted fa-5x"></i>
+      </div>
+
+
+      <!-- What We Do -->
+
+      <section class="container p-5" id="services">
+        <h1 class="display-5 my-5 text-center text-lg-start">What We Do</h1>
+        
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+          <div class="col">
+            <div class="card border-black shadow border-custom rounded-3 custom-min-height">
+              <div class="card-body d-flex flex-column gap-3">
+                <div class="card-img-top text-center text-xl-start"><i class="icon-bars-progress-solid icon-font-size fs-5 bg-primary text-light p-1 rounded-5 border-black"></i></div>
+                <div class="h5 fw-normal text-center text-xl-start ">Web Development</div>
+                <div class="card-text text-center text-xl-start ">Crafting responsive sites, creating web apps, optimizing for search engines, enabling e-commerce, and building specialized content management systems.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card border-black shadow border-custom rounded-3 custom-min-height">
+              <div class="card-body d-flex flex-column gap-3">
+                <div class="card-img-top text-center text-xl-start"><i class="icon-mobile-solid icon-font-size fs-5 bg-primary text-light p-1 rounded-5 border-black"></i></div>
+                <div class="h5 fw-normal text-center text-xl-start ">App Development</div>
+                <div class="card-text text-center text-xl-start ">Designing for iOS and Android, creating cross-platform apps, tailoring for specific industries, integrating APIs, and ensuring rigorous testing.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card border-black shadow border-custom rounded-3 custom-min-height">
+              <div class="card-body d-flex flex-column gap-3">
+                <div class="card-img-top text-center text-xl-start"><i class="icon-circle-exclamation-solid icon-font-size fs-5 bg-primary text-light p-1 rounded-5 border-black"></i></div>
+                <div class="h5 fw-normal text-center text-xl-start ">Maintanance Web or App</div>
+                <div class="card-text text-center text-xl-start ">Routine care, bug resolution, database management, performance enhancement, emergency recovery, and timely updates.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card border-black shadow border-custom rounded-3 custom-min-height">
+              <div class="card-body d-flex flex-column gap-3">
+                <div class="card-img-top text-center text-xl-start"><i class="icon-uikit icon-font-size fs-5 bg-primary text-light p-1 rounded-5 border-black"></i></div>
+                <div class="h5 fw-normal text-center text-xl-start  ">UI/UX Design</div>
+                <div class="card-text text-center text-xl-start ">User research, prototyping, intuitive interfaces, experience testing, and engaging animations.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card border-black shadow border-custom rounded-3">
+              <div class="card-body d-flex flex-column gap-3 custom-min-height">
+                <div class="card-img-top text-center text-xl-start"><i class=" icon-palette-solid icon-font-size fs-5 bg-primary text-light p-1 rounded-5 border-black"></i></div>
+                <div class="h5 fw-normal text-center text-xl-start ">Graphic Design</div>
+                <div class="card-text text-center text-xl-start ">Promotional materials, custom illustrations, product packaging, and social media graphics.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card border-black shadow border-custom rounded-3">
+              <div class="card-body d-flex flex-column gap-3 custom-min-height">
+                <div class="card-img-top text-center text-xl-start"><i class="icon-copyright-solid icon-font-size fs-5 bg-primary text-light p-1 rounded-5 border-black"></i></div>
+                <div class="h5 fw-normal text-center text-xl-start ">Brand & Visual Identity</div>
+                <div class="card-text text-center text-xl-start ">Unique logos, comprehensive guidelines, visual brand identities, and brand-focused marketing.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Selected Work -->
+
+      <section class="container p-5" id="work">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <h1 class="display-6 fw-normal">Selected work</h1>
+          <a class="text-dark fw-normal" href="#">See All</a>
+        </div>
+       
+
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 justify-content-center g-5">
+          <div class="col">
+            <div class="card border-0">
+              <img class="mb-4 shadow" src="https://cdn.dribbble.com/userupload/11164230/file/original-5361234856424310b93aa65da16f7d7c.png?resize=752x" alt="">
+                <div class="text-center d-sm-flex align-items-sm-center justify-content-sm-between">
+                  <p class="h4 fw-normal">Event Website</p>
+                  <button class="btn text-muted border bg-white rounded-5 btn-animation">UI/UX Design</button>
+                </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card border-0">
+              <img class="mb-4 shadow" src="https://cdn.dribbble.com/users/10338546/screenshots/20125622/media/f9306a66e95200fc4ddd025d09abd5bd.png" alt="">
+                <div class="text-center d-sm-flex align-items-center justify-content-between">
+                  <p class="h4 fw-normal">IT Solutions</p>
+                  <button class="btn text-muted border bg-white rounded-5 btn-animation">UI/UX Design</button>
+                </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card border-0">
+              <img class="mb-4 shadow" src="https://cdn.dribbble.com/userupload/5538507/file/original-36b3bda65d1246573e529fa0f8b7cb01.jpg?resize=1600x1200" alt="">
+                <div class="text-center d-sm-flex align-items-center justify-content-between">
+                  <p class="h4 fw-normal">Noyas Platform</p>
+                  <button class="btn text-muted border bg-white rounded-5 btn-animation">UI/UX Design</button>
+                </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card border-0">
+              <img class="mb-4 shadow" src="https://cdn.dribbble.com/userupload/14352296/file/original-9c01222af873a51eb2b395734d6d3704.png?resize=752x" alt="">
+                <div class="text-center d-sm-flex align-items-center justify-content-between">
+                  <p class="h4 fw-normal">ManaVilla</p>
+                  <button class="btn text-muted border bg-white rounded-5 btn-animation">UI/UX Design</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us -->
+
+      <section id="about">
+        <div class="container p-5">
+          <h1 class="display-5 fw-normal my-5 text-center text-lg-start">About Us</h1>
+          <div class="row row-cols-1 row-sm-cols-2 g-4">
+            <div class="col">
+              <p class="text-muted">IDV Technologies was founded to innovate web and mobile applications. Our team of engineers, developers, designers, and testers works together to deliver outstanding solutions. We specialize in multiple technology stacks and prioritize solving real-world problems with the latest innovations.</p>
+              <p class="text-muted">Our approach blends creativity and technical expertise, ensuring exceptional results. Clients often turn to us after other options fail, and many have remained with us for years due to our reliability and the business results we deliver.
+              </p>
+            </div class="col">
+
+            <div>
+              <p class="text-muted">Serving industries like health, finance, logistics, and construction, we are recognized for our quality and innovation. We have developed a diverse portfolio that showcases our ability to adapt and excel across different sectors, consistently meeting and exceeding client expectations. </p>
+              <p class="text-muted">We also leverage government incentives for research and development, pushing technology boundaries to provide cutting-edge solutions. Our commitment to continuous improvement and staying at the forefront of technology allows us to offer the most advanced and effective solutions to our clients.</p>
+            </div>
+          </div>
+
+      </section>
+
+      <!-- Team -->
+
+      <section id="team">
+
+          <div class="container p-5">
+            <div class="d-block d-lg-flex gap-3">
+                <div id="meet-team" class="card rounded-4 custom-bg-color border-0 mb-4 team-img-size my-0 mx-auto" style="height: 100%"; style="width: 100%">
+                  <div class="p-4 mx-2 mt-4 d-flex flex-column gap-3 text-center text-lg-start">
+                    <div class="card-title text-black-50 fw-normal">MEET OUR TEAM</div>
+                    <div class="h2 fw-normal lh-base">We're a team of Developers & Designers from Australia 🇦🇺</div>
+                    
+                  </div>
+                  <button class="btn btn-primary p-3 rounded-4 shadow border-custom mt-auto mx-4 mb-5 btn-animation">See Detail Company</button>
+                </div>
+            
+              
+            
+                <div class="swiper mySwiper1">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="card border-0 team-img-size my-0 mx-auto">
+                          <img  class="rounded-4 object-fit-contain" style="height: 100%"; style="width: 100%" src="https://images.unsplash.com/photo-1598897516650-e4dc73d8e417?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+
+                          <div class="d-block text-center  py-3">
+                            <p class="h5 fw-normal">Emily Johnson</p>
+                            <button class="btn text-muted border bg-white rounded-5 btn-animation">Front-End Developer</button>
+                          </div>
+                        </div>
+                      </div>
+                    
+                    <div class="swiper-slide">
+                      <div class="card border-0 team-img-size my-0 mx-auto">
+                        <img  class="rounded-4 object-fit-cover" style="height: 100%"; style="width: 100%" src="https://images.unsplash.com/photo-1522872641108-bcb51e2aff69?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        <div class="d-block text-center  py-3">
+                          <p class="h5 fw-normal">Michael Smith</p>
+                          <button class="btn text-muted border bg-white rounded-5 btn-animation">UX Designer</button>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="swiper-slide">
+                      <div class="card border-0 team-img-size my-0 mx-auto">
+                        <img  class="rounded-4 object-fit-cover" style="height: 100%"; style="width: 100%" src="https://images.unsplash.com/photo-1552058544-f2b08422138a?q=80&w=1299&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        <div class="d-block text-center  py-3">
+                          <p class="h5 fw-normal">James Anderson</p>
+                          <button class="btn text-muted border bg-white rounded-5 btn-animation">Back-End Developer</button>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <div class="swiper-slide">
+                      <div class="card border-0 team-img-size my-0 mx-auto">
+                        <img  class="rounded-4 object-fit-cover" style="height: 100%"; style="width: 100%" src="https://images.unsplash.com/photo-1659377229079-8f0b34c64077?q=80&w=1285&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        <div class="d-block text-center  py-3">
+                          <p class="h5 fw-normal">Susan Clark</p>
+                          <button class="btn text-muted border bg-white rounded-5 btn-animation">Project Manager</button>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="swiper-slide">
+                      <div class="card border-0 team-img-size my-0 mx-auto">
+                        <img  class="rounded-4 object-fit-cover" style="height: 100%"; style="width: 100%" src="https://images.unsplash.com/photo-1627100232320-9d8cdb095d51?q=80&w=1342&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        <div class="d-block text-center py-3">
+                          <p class="h5 fw-normal">David Brown</p>
+                          <button class="btn text-muted border bg-white rounded-5 btn-animation">Full-Stack Developer</button>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="swiper-slide">
+                      <div class="card border-0 team-img-size my-0 mx-auto">
+                        <img  class="rounded-4 object-fit-cover" style="height: 100%"; style="width: 100%" src="https://images.unsplash.com/photo-1566321985021-e32e0e22e5e1?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        <div class="d-block text-center py-3">
+                          <p class="h5 fw-normal">Anna Lee</p>
+                          <button class="btn text-muted border bg-white rounded-5 btn-animation">Graphic Designer</button>
+                        </div>
+                      </div>
+                    </div>
+                  
+
+                </div>
+                </div>
+              
+              </div>
+           
+          
+
+          <h1 class="display-6 mt-5 margin-bottom-custom fw-normal text-center text-lg-start">Our Team of Experts</h1>
+
+          <div class="d-flex flex-column gap-5">
+
+            <div class="d-flex align-items-start gap-5 custom-width  my-0 mx-auto">
+              <div class="d-flex flex-column align-items-center">
+                <i class="icon-paypal fs-2"></i>
+              </div>
+              <div class="d-flex flex-column gap-4 mt-2">
+                <h4 class="fw-normal h4">"Great Experience"</h4>
+                <p class="text-black-50">“Great experience! Highly recommended. Great comms, responsive and excellent design.”</p>
+                <p class="fw-regular">Derek Ignite - Founder & CEO Ignite Growth</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-5 custom-width  my-0 mx-auto border-bottom-custom">
+              <div class="d-flex flex-column align-items-center">
+                <i class="icon-stripe fs-2"></i>
+              </div>
+              <div class="d-flex flex-column gap-4 mt-2">
+                <h4 class="fw-normal h4">“Reliable Digital Partner”</h4>
+                <p class="text-black-50">“IDV Technologies is our go-to choice for web and app development. Their commitment to excellence and customer-centric approach make them a reliable digital partner.”</p>
+                <p class="fw-regular mb-5">Zahid Azmi Ibrahim - CEO Logoipsum</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-5 custom-width my-0 mx-auto">
+              <div class="d-flex flex-column align-items-center">
+                <i class="icon-salesforce fs-2"></i>
+              </div>
+              <div class="d-flex flex-column gap-4 mt-2">
+                <h4 class="fw-normal h4">“Unmatched Professionalism and Expertise”</h4>
+                <p class="text-black-50">“The professionalism and expertise displayed by IDV Technologies are unparalleled. Their web development and design services are top-notch, and their communication is outstanding.”</p>
+                <p class="fw-normal">Malik Abimanyu - CEO Logoipsum</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <div class="p-5 custom-bg-color">
+      <div class="text-center rounded-3 d-flex flex-column gap-4 container">
+        <h1 class="custom-width my-0 mx-auto fw-normal h1">Let's start building your business unique story together</h1>
+        <p class="custom-width my-0 mx-auto fw-normal text-black-50">Want to see what a difference strong product can make? Request a consultation today.</p>
+        <button class="btn btn-primary p-3 rounded-4 shadow border-custom m-auto mt-3 btn-animation">Start New Project</button>
+      </div>
+    </div>
+    
+
+    <footer class="bg-dark pt-3 ps-5 pe-5 border-bottom-footer" id="contact">
+      <div class="container my-0 mx-auto">
+        <div class="d-block d-sm-flex text-center align-items-sm-center justify-content-sm-between border-bottom">
+          <div class="mb-3">
+            <a href="#" class="navbar-brand text-light fs-4 fw-medium"><i class="fa-brands fa-envira text-bg-primary p-1 rounded-5"></i> IDV Technologies</a>
+          </div>
+  
+          <div class="mb-3 d-flex gap-1 justify-content-center align-items-center">
+            <a href="#"><i class="icon-linkedin fs-3" style="color: #ffffff;"></i></a>
+            <a href="#"><i class="icon-instagram fs-3" style="color: #ffffff;"></i></a>
+            <a href="#"><i class="icon-twitter fs-3" style="color: #ffffff;"></i></a>
+          </div>
+        </div>
+  
+        <div class="d-flex flex-column flex-lg-row mt-4 justify-content-center align-items-center">
+          <p id="footer-text" class=" text-light bg-dark text-center fs-6"><i class="icon-seperatorblue text-primary"></i> WEBSITES</p>
+          <p id="footer-text" class="text-light bg-dark text-center fs-6"><i class="icon-seperatorblue text-primary"></i> MOBILE APPS</p> 
+          <p id="footer-text" class="text-light bg-dark text-center fs-6"><i class="icon-seperatorblue text-primary"></i> FRONTEND DEVELOPMENT</p>
+          <p id="footer-text" class="text-light bg-dark text-center fs-6"><i class="icon-seperatorblue text-primary"></i> UI/UX DESIGN</p> 
+          <p id="footer-text" class="text-light bg-dark text-center fs-6"><i class="icon-seperatorblue text-primary"></i> BRAND & GRAPHIC DESIGN</p>
+        </div>
+          <p class="text-light text-center mt-2 fw-light"><i class="fa-regular fa-copyright" style="color: #ffffff;"></i>2024 Made By Henry Yum. All Rights Reserved. Powered By QuickSiteGuru.</p>
+      </div>
+      
+    </footer>
+
+<!-- Close on Click Script -->
+
+  <script>
+  function closeMenu() {
+    var navbarCollapse = document.getElementById('navbarNav');
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    
+    if (window.getComputedStyle(navbarToggler).display !== 'none') {
+      var bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+        toggle: false
+      });
+      bsCollapse.hide();
+    }
+  }
+</script>
+
+
+<!-- Bootstrap Script -->
+  <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+  crossorigin="anonymous"
+  >
+  </script>
+
+  <!-- SwiperJS Script -->
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+  var mySwiper1 = new Swiper('.mySwiper1', {
+    // Optional parameters
+    direction: 'horizontal',
+    spaceBetween: 15,
+    slidesPerView: 1,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      dedisableOnInteraction: false,
+    },
+
+    // If you want to add pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if you need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+
+    breakpoints: {
+      600: {
+        slidesPerView: 2
+      },
+      1000: {
+        slidesPerView: 2
+      },
+      1400: {
+        slidesPerView: 3
+      },
+      
+    }
+  });
+</script>
+
+<script>
+  meetTeam = document.getElementById('meet-team')
+
+  function checkWidth(){
+    if (window.innerWidth <= 1000) {
+      meetTeam.classList.remove('team-img-size')
+
+    } else {
+      meetTeam.classList.add('team-img-size')
+    }
+  }
+
+  window.addEventListener('resize', checkWidth)
+
+checkWidth();
+</script>
+
+
+  </body>
+</html>
+

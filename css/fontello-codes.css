@@ -1,0 +1,19 @@
+
+.icon-seperatorwhite:before { content: '\e800'; } /* '' */
+.icon-seperatorblue:before { content: '\e801'; } /* '' */
+.icon-twitter:before { content: '\e802'; } /* '' */
+.icon-instagram:before { content: '\e803'; } /* '' */
+.icon-linkedin:before { content: '\e804'; } /* '' */
+.icon-palette-solid:before { content: '\e805'; } /* '' */
+.icon-bars-progress-solid:before { content: '\e806'; } /* '' */
+.icon-copyright-solid:before { content: '\e807'; } /* '' */
+.icon-uikit:before { content: '\e808'; } /* '' */
+.icon-cc-discover:before { content: '\e809'; } /* '' */
+.icon-circle-exclamation-solid:before { content: '\e80a'; } /* '' */
+.icon-cc-jcb:before { content: '\e80b'; } /* '' */
+.icon-cc-paypal:before { content: '\e80c'; } /* '' */
+.icon-stripe:before { content: '\e80d'; } /* '' */
+.icon-salesforce:before { content: '\e80e'; } /* '' */
+.icon-cc-stripe:before { content: '\e80f'; } /* '' */
+.icon-mobile-solid:before { content: '\e810'; } /* '' */
+.icon-paypal:before { content: '\f1ed'; } /* '' */
