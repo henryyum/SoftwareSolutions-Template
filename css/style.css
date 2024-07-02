@@ -128,8 +128,8 @@ body {
 }
 
 .margin-custom {
-  margin-top: 12rem;
-  margin-bottom: 4rem;
+  margin-top: 15rem;
+  margin-bottom: 3rem;
 }
 .font-size-custom {
   font-size: 6rem;
@@ -175,6 +175,16 @@ body {
 .custom-width {
   width: 50%;
 }
+
+.hero-icons {
+  width: 96px;
+}
+
+.customer-icons {
+  width: 36px;
+  height: 36px;
+}
+
 @media (max-width: 1650px) {
   .custom-fs {
     font-size: 1.5rem;
@@ -197,6 +207,9 @@ body {
   }
   .custom-fs {
     font-size: 1rem;
+  }
+  .hero-icons {
+    width: 80px;
   }
 }
 @media (max-width: 800px) {
