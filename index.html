@@ -20,8 +20,6 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-
   <!-- Fontello -->
     <link rel="stylesheet" href="css/fontello-embedded.css">
 
@@ -327,33 +325,33 @@
 
           <div class="d-flex flex-column gap-5">
 
-            <div class="d-flex flex-column text-center text-lg-start align-items-start gap-5 custom-width">
-              <div class="d-flex flex-column align-items-center mx-0 my-auto">
+            <div class="d-flex flex-column flex-lg-row text-center text-lg-start my-0 mx-auto custom-gap-xl custom-gap custom-width">
+              <div class="d-flex flex-column my-0 mx-auto">
                 <img class="customer-icons" src="./images/paypal.svg" alt="">
               </div>
-              <div class="d-flex flex-column gap-4 mt-1">
+              <div class="d-flex flex-column gap-2 mt-1">
                 <h4 class="fw-normal h4">"Great Experience"</h4>
                 <p class="text-black-50">“Great experience! Highly recommended. Great comms, responsive and excellent design.”</p>
                 <p class="fw-regular">Derek Ignite - Founder & CEO Ignite Growth</p>
               </div>
             </div>
 
-            <div class="d-flex flex-column text-center text-lg-start align-items-start gap-5 custom-width">
-              <div class="d-flex flex-column align-items-center mx-0 my-auto">
+            <div class="d-flex flex-column flex-lg-row text-center text-lg-start my-0 mx-auto custom-gap-xl custom-gap custom-width">
+              <div class="d-flex flex-column my-0 mx-auto">
                 <img class="customer-icons" src="./images/stripe.svg" alt="">
               </div>
-              <div class="d-flex flex-column gap-4 mt-1">
+              <div class="d-flex flex-column gap-2 mt-1">
                 <h4 class="fw-normal h4">“Reliable Digital Partner”</h4>
                 <p class="text-black-50">“IDV Technologies is our go-to choice for web and app development. Their commitment to excellence and customer-centric approach make them a reliable digital partner.”</p>
                 <p class="fw-regular mb-5">Zahid Azmi Ibrahim - CEO Logoipsum</p>
               </div>
             </div>
 
-            <div class="d-flex flex-column text-center text-lg-start align-items-start gap-5 custom-width">
-              <div class="d-flex flex-column align-items-center mx-0 my-auto">
+            <div class="d-flex flex-column flex-lg-row text-center text-lg-start my-0 mx-auto custom-gap-xl custom-gap custom-width">
+              <div class="d-flex flex-column my-0 mx-auto">
                 <img class="customer-icons" src="./images/salesforce.svg" alt="">
               </div>
-              <div class="d-flex flex-column gap-4 mt-1">
+              <div class="d-flex flex-column gap-2 mt-1">
                 <h4 class="fw-normal h4">“Unmatched Professionalism and Expertise”</h4>
                 <p class="text-black-50">“The professionalism and expertise displayed by IDV Technologies are unparalleled. Their web development and design services are top-notch, and their communication is outstanding.”</p>
                 <p class="fw-normal">Malik Abimanyu - CEO Logoipsum</p>
@@ -414,6 +412,14 @@
       bsCollapse.hide();
     }
   }
+  document.addEventListener('click', function(event) {
+    var isClickInside = document.getElementById('navbarNav').contains(event.target);
+    var isClickOnToggler = document.querySelector('.navbar-toggler').contains(event.target);
+
+    if (!isClickInside && !isClickOnToggler) {
+        closeMenu();
+    }
+});
 </script>
 
 

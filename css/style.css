@@ -79,7 +79,6 @@
 body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
-  user-select: none;
 }
 
 .main-tag-1 {
@@ -184,17 +183,22 @@ body {
   width: 36px;
   height: 36px;
 }
+.custom-gap-xl {
+  gap: 2.5rem;
+}
 
 @media (max-width: 1650px) {
   .custom-fs {
     font-size: 1.5rem;
   }
+ 
 }
 
 @media (max-width: 1199px) {
   .custom-fs {
     font-size: 1.15rem;
   }
+
 } 
 
 @media (max-width: 992px) {
@@ -210,6 +214,9 @@ body {
   }
   .hero-icons {
     width: 80px;
+  }
+  .custom-gap {
+    gap: 1.25rem;
   }
 }
 @media (max-width: 800px) {
