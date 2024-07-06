@@ -76,15 +76,15 @@
         <button class="btn bg-light text-primary border rounded-3">#1 BEST YOUNG SOFTWARE HOUSE</button>
         <h1 class="display-2 mt-4 fw-normal">We create Apps - Web for human, not <span class="text-primary text-decoration-line-through">robots</span></h1>
         <p class="custom-width ms-auto me-auto my-4 text-muted">A team of experienced young developers and designers passionate about creating web-apps to help your business grow</p>
-        <button class="btn btn-primary rounded-4 shadow p-3 mt-3 border-custom btn-animation">Start New Project</button>
+        <!-- <button class="btn btn-primary rounded-4 shadow p-3 mt-3 border-custom btn-animation">Start New Project</button> -->
       
       </div>
-      <div class="d-none d-lg-block transition text-center position-relative mt-5">
-        <h2 class="rotate-blue position-absolute text-bg-primary custom-fs py-2">WEBSITES <i class="icon-seperatorwhite"></i>MOBILE APPS <i class="icon-seperatorwhite"></i> FRONTEND DEVELOPMENT <i class="icon-seperatorwhite"></i> UI/UX DESIGN <i class="icon-seperatorwhite"></i> BRAND & GRAPHIC DESIGN</h2>
-        <h2 class="rotate-black position-absolute text-bg-dark custom-fs py-2">WEBSITES <i class="icon-seperatorwhite"></i>MOBILE APPS <i class="icon-seperatorwhite"></i> FRONTEND DEVELOPMENT <i class="icon-seperatorwhite"></i> UI/UX DESIGN <i class="icon-seperatorwhite"></i> BRAND & GRAPHIC DESIGN</h2>
+      <div class="d-none d-lg-block transition text-center position-relative">
+        <!-- <h2 class="rotate-blue position-absolute text-bg-primary custom-fs py-2">WEBSITES <i class="icon-seperatorwhite"></i>MOBILE APPS <i class="icon-seperatorwhite"></i> FRONTEND DEVELOPMENT <i class="icon-seperatorwhite"></i> UI/UX DESIGN <i class="icon-seperatorwhite"></i> BRAND & GRAPHIC DESIGN</h2>
+        <h2 class="rotate-black position-absolute text-bg-dark custom-fs py-2">WEBSITES <i class="icon-seperatorwhite"></i>MOBILE APPS <i class="icon-seperatorwhite"></i> FRONTEND DEVELOPMENT <i class="icon-seperatorwhite"></i> UI/UX DESIGN <i class="icon-seperatorwhite"></i> BRAND & GRAPHIC DESIGN</h2> -->
       </div>
 
-      <div class="d-flex flex-wrap justify-content-center align-items-center gap-5 px-4 margin-custom">
+      <div class="d-flex flex-wrap justify-content-center align-items-center gap-5 px-4">
         <img class="hero-icons" src="./images/salesforce.svg" alt="">
         <img class="hero-icons" src="./images/cc-stripe.svg" alt="">
         <img class="hero-icons" src="./images/cc-paypal.svg" alt="">
@@ -96,6 +96,8 @@
       <!-- What We Do -->
 
       <section class="container p-5" id="services">
+
+        
         <h1 class="display-5 mb-5 text-center text-lg-start">What We Do</h1>
         
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
@@ -321,7 +323,7 @@
            
           
 
-          <h1 class="display-6 mt-5 margin-bottom-custom fw-normal text-center text-lg-start">Our Customers</h1>
+          <h1 class="display-6 mt-5 margin-bottom-custom fw-normal text-center text-lg-start">Testimonials</h1>
 
           <div class="d-flex flex-column gap-5">
 
@@ -342,7 +344,7 @@
               </div>
               <div class="d-flex flex-column gap-2 mt-1">
                 <h4 class="fw-normal h4">“Reliable Digital Partner”</h4>
-                <p class="text-black-50">“IDV Technologies is our go-to choice for web and app development. Their commitment to excellence and customer-centric approach make them a reliable digital partner.”</p>
+                <p class="text-black-50">“IDV T©echnologies is our go-to choice for web and app development. Their commitment to excellence and customer-centric approach make them a reliable digital partner.”</p>
                 <p class="fw-regular mb-5">Zahid Azmi Ibrahim - CEO Logoipsum</p>
               </div>
             </div>
@@ -374,19 +376,34 @@
           <div class="col-lg-6 offset-lg-3 ">
             <form id="contactForm">
               <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name">
+                <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+                <input id="" type="text" class="form-control" required id="name">
               </div>
               <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email">
+                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                <input id="" type="email" class="form-control" required id="email">
               </div>
               <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="5"></textarea>
+                <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                <textarea id="" class="form-control" id="message" required rows="5"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary btn-animation">Submit</button>
+              <button type="submit" class="btn btn-primary btn-animation" data-bs-toggle="modal" data-bs-target="#myModal">Submit</button>
             </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="myModalLabel">Message Sent</h1>
+              <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body d-flex gap-2">
+              <p>Your form has been successfully submitted</p>
+              <img class="align-self-start" style="width: 20px" src="./images/check-solid.svg" alt="">
+            </div>
           </div>
         </div>
       </div>
@@ -422,11 +439,12 @@
 
 <!-- Contact Form -->
 
-<script>
+<!-- <script>
   const contactForm = document.getElementById("contactForm");
   if (contactForm) {
     document.getElementById('contactForm').addEventListener('submit', async function(e) {
       e.preventDefault();
+
       
         const result = await submitContact(
           document.getElementById('name').value,
@@ -434,8 +452,34 @@
           document.getElementById('message').value
         );
         
+        
+        
     });
   }
+</script> -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+          contactForm.addEventListener('submit', async function(e) {
+              e.preventDefault();
+
+              if (contactForm.checkValidity()) {
+                contactForm.classList.remove('was-validated')
+                  await submitContact(
+                      document.getElementById('name').value,
+                      document.getElementById('email').value,
+                      document.getElementById('message').value
+                  );
+                  $('#myModal').modal('show');
+              } else {
+                  contactForm.classList.add('was-validated');
+              }
+          });
+      }
+  });
+
 </script>
 
 <!-- Close on Click Script -->
