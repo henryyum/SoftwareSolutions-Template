@@ -96,8 +96,8 @@ body {
 .border-custom {
   border-top: 2px solid black;
   border-left: 2px solid black;
-  border-right: 6px solid black;
-  border-bottom: 6px solid black;
+  border-right: 4px solid black;
+  border-bottom: 4px solid black;
 }
 
 .border-bottom-custom {
