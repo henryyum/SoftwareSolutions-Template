@@ -187,6 +187,14 @@ body {
   gap: 2.5rem;
 }
 
+btn:hover {
+  cursor: none;
+}
+
+.scroll-margin {
+  scroll-margin-top: 80px;
+}
+
 @media (max-width: 1650px) {
   .custom-fs {
     font-size: 1.5rem;
@@ -198,7 +206,9 @@ body {
   .custom-fs {
     font-size: 1.15rem;
   }
-
+  .scroll-margin {
+    scroll-margin-top: 400px;
+  }
 } 
 
 @media (max-width: 992px) {

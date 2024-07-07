@@ -26,6 +26,11 @@
   <!-- SwiperJS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 
+  <!-- SweetAlert2 -->
+  <link href="
+  https://cdn.jsdelivr.net/npm/sweetalert2@11.12.2/dist/sweetalert2.min.css
+  " rel="stylesheet">
+
   <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <title>Software Solutions Template</title>
@@ -95,7 +100,7 @@
 
       <!-- What We Do -->
 
-      <section class="container p-5" id="services">
+      <section class="container p-5 scroll-margin" id="services">
 
         <h1 class="display-5 mb-5 text-center text-lg-start">What We Do</h1>
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
@@ -165,7 +170,7 @@
 
       <!-- Selected Work -->
 
-      <section class="container p-5" id="work">
+      <section class="container p-5 scroll-margin" id="work">
         <div class="text-center d-sm-flex align-items-center justify-content-between mb-5">
           <h1 class="display-6 fw-normal">Selected work</h1>
         </div>
@@ -216,7 +221,7 @@
 
       <!-- About Us -->
 
-      <section id="about">
+      <section class="scroll-margin" id="about">
         <div class="container px-5 py-4">
           <h1 class="display-5 fw-normal mb-5 text-center text-lg-start">About Us</h1>
           <div class="row row-cols-1 row-sm-cols-2 g-4">
@@ -237,7 +242,7 @@
 
       <!-- Team -->
 
-      <section id="team">
+      <section class="scroll-margin" id="team">
 
           <div class="container p-5">
             <div class="d-block d-lg-flex gap-3">
@@ -365,7 +370,7 @@
       </section>
 
     </main>
-    <div id="contact" class="p-5 custom-bg-color">
+    <div id="contact" class="p-5 custom-bg-color scroll-margin">
       <div class="text-center rounded-3 d-flex flex-column gap-4 container">
         <h1 class="custom-width my-0 mx-auto fw-normal h1">Let's start building your business unique story together</h1>
         <p class="custom-width my-0 mx-auto fw-normal text-black-50">Want to see what a difference strong product can make? Request a consultation today.</p>
@@ -374,26 +379,26 @@
       <div class="container mt-4">
         <div class="row">
           <div class="col-lg-6 offset-lg-3 ">
-            <form id="contactForm">
+            <form id="form" novalidate>
               <div class="mb-3">
                 <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
-                <input id="" type="text" class="form-control" required id="name">
+                <input id="name" name="name" type="text" class="form-control" required>
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-                <input id="" type="email" class="form-control" required id="email">
+                <input id="email" name="email" type="email" class="form-control" required>
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
-                <textarea id="" class="form-control" id="message" required rows="5"></textarea>
+                <textarea id="message" class="form-control" required rows="5"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary btn-animation" data-bs-toggle="modal" data-bs-target="#myModal">Submit</button>
+              <button type="submit" class="btn btn-primary btn-animation">Submit</button>
             </form>
           </div>
         </div>
       </div>
 
-      <div class="modal fade" id="myModal">
+      <!-- <div class="modal fade" id="myModal">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -406,7 +411,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
     </div>
     
@@ -441,8 +446,6 @@
       
     </footer>
 
-<!-- Contact Form -->
-
 <!-- <script>
   const contactForm = document.getElementById("contactForm");
   if (contactForm) {
@@ -462,29 +465,58 @@
   }
 </script> -->
 
+<!-- SweetAlert2 CDN -->
+<script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.12.2/dist/sweetalert2.all.min.js
+"></script>
+
+<!-- Contact Form -->
+
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-      const contactForm = document.getElementById('contactForm');
-      if (contactForm) {
-          contactForm.addEventListener('submit', async function(e) {
-              e.preventDefault();
+  let form = document.getElementById('form')
+  form.addEventListener('submit', (e) => {
+    e.preventDefault()
 
-              if (contactForm.checkValidity()) {
-                contactForm.classList.remove('was-validated')
-                  await submitContact(
-                      document.getElementById('name').value,
-                      document.getElementById('email').value,
-                      document.getElementById('message').value
-                  );
-                  $('#myModal').modal('show');
-              } else {
-                  contactForm.classList.add('was-validated');
-              }
-          });
-      }
-  });
+    let name = document.getElementById('name').value
+    let email = document.getElementById('email').value
+    let message = document.getElementById('message').value
 
+    let errors = []
+    if(name.trim() === ""){
+      errors.push("Please enter your name,")
+    }
+    if(email.trim() === ""){
+      errors.push("Please enter your email,")
+    }
+    if(message.trim() === ""){
+      errors.push("Please enter a message")
+    }
+    else if(!isValidEmail(email)) {
+      errors.push("Please enter a valid email")
+    }
+    if(errors.length > 0) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Validation Error',
+        text: errors.join('\n')
+      });
+
+      return false
+    }
+
+    Swal.fire({
+      icon: 'success',
+      title: 'Form submitted',
+      text: "Thank you for contacting us!"
+    });
+  })
+
+    function isValidEmail(email) {
+      const emailRegex = /^\S+@\S+\.\S+$/;
+      return emailRegex.test(email);
+    }
 </script>
+
 
 <!-- Close on Click Script -->
 
